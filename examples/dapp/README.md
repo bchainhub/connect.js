@@ -1,6 +1,6 @@
 # Browser-only dapp example
 
-This is a complete static dapp using the main `connect.js` import. It discovers wallets, requests account access, lets the user select an account, shows the exact sign-in message, obtains explicit signature approval and verifies the proof in the browser. A signed-in panel then shows the verified identity. Disconnect, account/network changes, cancellation and reload clear local state.
+This is a complete static dapp using the main `connect-protocol` import. It discovers wallets, requests account access, lets the user select an account, shows the exact sign-in message, obtains explicit signature approval and verifies the proof in the browser. A signed-in panel then shows the verified identity. Disconnect, account/network changes, cancellation and reload clear local state.
 
 ## Run
 
@@ -13,9 +13,9 @@ npm run build
 
 Serve the repository as static files on your HTTPS domain and open `/examples/dapp/index.html`. No Connect server, database, session endpoint or blockchain RPC is required. For local development, use a trusted local HTTPS certificate and a DNS name such as `connect.test`; Connect's canonical origin rules do not accept `http://localhost`, IP addresses or custom ports. Use your existing static web development setup.
 
-Until the package is published, run `npm pack` in this repository and install the generated `.tgz` in your own dapp with `npm install /path/to/connect.js-0.1.0.tgz`.
+Until the package is published, run `npm pack` in this repository and install the generated `.tgz` in your own dapp with `npm install /path/to/connect-protocol-0.1.1.tgz`.
 
-The import map resolves `connect.js` to the built SDK. In a bundled dapp, install `connect.js`, remove the import map and keep the same JavaScript imports. For static deployment, retain the example files and the complete `dist/browser/` directory at the relative paths used by the import map, including adjacent chunks and license notices.
+The import map resolves `connect-protocol` to the built SDK. In a bundled dapp, install `connect-protocol`, remove the import map and keep the same JavaScript imports. For static deployment, retain the example files and the complete `dist/browser/` directory at the relative paths used by the import map, including adjacent chunks and license notices.
 
 ## Core login flow
 
@@ -26,7 +26,7 @@ import {
 	ethereumAccountProvider,
 	signBrowserChallenge,
 	chains,
-} from 'connect.js';
+} from 'connect-protocol';
 
 // Run from the Connect button after the user selects a discovered provider.
 await requestEthereumAccounts(selectedProvider);
@@ -52,7 +52,7 @@ The example's `wallets.js` registry accepts integrations with `id`, `name`, `cha
 For a Core wallet integration, add a module alongside `app.js`, import it from `app.js`, and register your host-supplied bridge:
 
 ```js
-import { chains, coreAccountProvider } from 'connect.js';
+import { chains, coreAccountProvider } from 'connect-protocol';
 import { registerWallet } from './wallets.js';
 
 // coreBridge and requestWalletAccess are supplied by your wallet integration.

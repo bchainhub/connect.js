@@ -28,7 +28,7 @@ Signing method availability depends on the host wallet. These are protocol adapt
 ## TypeScript wallet
 
 ```ts
-import { chains, walletAccount } from 'connect.js';
+import { chains, walletAccount } from 'connect-protocol';
 
 const account = walletAccount(chains.solana, address, async bytes => {
   const result = await wallet.signMessage(bytes);
@@ -76,7 +76,7 @@ All profiles prove possession of the key associated with the selected address. T
 
 Cardano enforces protected EdDSA (`-8` inside legacy CIP-8 COSE, Ed25519 curve 6 and OKP key type 1), the exact protected address, the payload and a matching Blake2b-224 key credential. The Connect algorithm remains the fully specified Ed25519 identifier `-19`. Attached unhashed and Blake2b-224-hashed payloads are supported. Protected headers must be exactly algorithm and address; unprotected headers exactly `hashed`; COSE_Key exactly kty, alg, crv and x. Unknown/critical extensions, duplicate map keys, detached payloads, pointers, scripts and Byron addresses are rejected.
 
-Monero verification lazily loads monero-project WASM through monero-ts, operates offline, validates the address checksum/network, and accepts only modern spend-key SigV2 proofs. Each verification closes its temporary in-memory wallet; it does not persist a wallet or contact a daemon. This is heavier than the other verifiers and requires WebAssembly. connect.js ships browser WASM chunks; better-connect owns the Node WASM loader and bundles its patched Monero dependency. The Bitcoin legacy signing library is used only in better-connect tests as an independent signing implementation; production recovery uses noble. Remaining low-severity elliptic audit notices are limited to that development dependency.
+Monero verification lazily loads monero-project WASM through monero-ts, operates offline, validates the address checksum/network, and accepts only modern spend-key SigV2 proofs. Each verification closes its temporary in-memory wallet; it does not persist a wallet or contact a daemon. This is heavier than the other verifiers and requires WebAssembly. connect-protocol ships browser WASM chunks; better-connect owns the Node WASM loader and bundles its patched Monero dependency. The Bitcoin legacy signing library is used only in better-connect tests as an independent signing implementation; production recovery uses noble. Remaining low-severity elliptic audit notices are limited to that development dependency.
 
 ## Standards and references
 
@@ -88,4 +88,4 @@ Monero verification lazily loads monero-project WASM through monero-ts, operates
 - [Litecoin signed messages](https://github.com/litecoin-project/litecoin/blob/master/src/util/message.cpp), [Zcash message magic](https://github.com/zcash/zcash/blob/master/src/main.cpp), [Zcash address versions and genesis](https://github.com/zcash/zcash/blob/master/src/chainparams.cpp).
 - [CAIP namespaces](https://namespaces.chainagnostic.org/), [Base chain ID](https://docs.base.org/base-chain/api-reference/ethereum-json-rpc-api/eth_chainId), [Polygon chain ID](https://docs.polygon.technology/wallets/wallet-operations), [BNB configuration](https://docs.bnbchain.org/bnb-smart-chain/developers/wallet-configuration/).
 
-The main `connect.js` import provides browser-only challenge creation and verification. `connect.js/verification` exposes signature profiles, and `connect.js/wallet` exposes wallet discovery and adapters. better-connect owns its backend engine, HTTP endpoints and session storage. connect.js has no server or dapp entry point.
+The main `connect-protocol` import provides browser-only challenge creation and verification. `connect-protocol/verification` exposes signature profiles, and `connect-protocol/wallet` exposes wallet discovery and adapters. better-connect owns its backend engine, HTTP endpoints and session storage. connect-protocol has no server or dapp entry point.

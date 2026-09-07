@@ -3,11 +3,11 @@
 Browser-only Connect v1 authentication and multi-chain wallet adapters. Create a challenge, obtain an explicitly approved wallet signature, and verify the proof locally. **No server, database or blockchain RPC is required.** Private keys stay in the wallet.
 
 ```sh
-npm install connect.js
+npm install connect-protocol
 ```
 
 ```ts
-import { BrowserConnect, signBrowserChallenge } from 'connect.js';
+import { BrowserConnect, signBrowserChallenge } from 'connect-protocol';
 
 const request = new BrowserConnect().create();
 // Display request.challenge and let the user choose and approve a wallet account.
@@ -15,7 +15,7 @@ const proof = await signBrowserChallenge(request.challenge, selectedWalletAccoun
 const account = await request.verify(proof);
 ```
 
-The main `connect.js` import is the browser API. `connect.js/wallet` provides wallet discovery and signing adapters; `connect.js/verification` provides signature profiles for custom integrations. There are no `/server`, `/dapp`, `/browser` or `/evm` entry points, HTTP handlers, request stores, or built-in HTTP transport. The package publishes prebuilt browser modules and TypeScript declarations, with no Node runtime requirement or bundled Node Monero package.
+The main `connect-protocol` import is the browser API. `connect-protocol/wallet` provides wallet discovery and signing adapters; `connect-protocol/verification` provides signature profiles for custom integrations. There are no `/server`, `/dapp`, `/browser` or `/evm` entry points, HTTP handlers, request stores, or built-in HTTP transport. The package publishes prebuilt browser modules and TypeScript declarations, with no Node runtime requirement or bundled Node Monero package.
 
 Built-in chains cover Core Blockchain, Ethereum, Polygon, Base, Bitcoin, Solana, BNB Smart Chain, TRON, Monero, Stellar, Litecoin, XRP, Zcash and Cardano. See [supported wallet methods and addresses](docs/CHAINS.md) and [wallet adapters](docs/WALLETS.md). Core uses Ed448 and ICAN addresses, including mainnet and Devin; support does not depend on a released wallet brand.
 
@@ -44,7 +44,7 @@ Licensed under [CORE License](LICENSE). See [release setup](docs/RELEASE.md).
 Use [the nearby dapp example](examples/nearby/index.html) with the Flutter example. It generates a full QR/deep link and accepts Bluetooth or manually returned encrypted responses. See [transport and offline limits](docs/NEARBY.md).
 
 ```ts
-import { BrowserConnect, createBrowserHandoff, receiveBluetoothResponse } from 'connect.js';
+import { BrowserConnect, createBrowserHandoff, receiveBluetoothResponse } from 'connect-protocol';
 const request = new BrowserConnect({ origin: location.origin }).create();
 const handoff = createBrowserHandoff(request);
 // Render handoff.uri as QR or a connect:// link.
@@ -57,3 +57,5 @@ const identity = await handoff.accept(packet);
 Other channels pass their packet directly to `handoff.accept(packet)`. No Better Auth, backend or database is needed.
 
 For separate device controls, use `connectBluetoothDevice(ticket)`, `isBluetoothDeviceConnected(device)` and `disconnectBluetoothDevice(device)`. Pass `{ device }` to `receiveBluetoothResponse(ticket, { device })` to reuse or reconnect that authorized device. Without it, receiving prompts for a device and connects automatically. See [device connection lifecycle](docs/NEARBY.md#connect-a-device-explicitly-or-on-transfer).
+
+This package is distributed under the [CORE License](LICENSE). It is not an OSI-approved license.

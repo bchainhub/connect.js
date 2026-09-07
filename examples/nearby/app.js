@@ -6,7 +6,7 @@ import {
 	disconnectBluetoothDevice,
 	chains,
 	requirementsFor,
-} from 'connect.js';
+} from 'connect-protocol';
 import { toCanvas } from 'qrcode';
 const el = (id) => document.getElementById(id);
 let exchange, controller, request, device;

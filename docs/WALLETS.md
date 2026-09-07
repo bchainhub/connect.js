@@ -1,6 +1,6 @@
 # Wallet integration
 
-Import wallet adapters from `connect.js/wallet`. The former `connect.js/evm` entry point has been removed. The API is based on capabilities and signing standards, without a wallet-brand allowlist.
+Import wallet adapters from `connect-protocol/wallet`. The former `connect-protocol/evm` entry point has been removed. The API is based on capabilities and signing standards, without a wallet-brand allowlist.
 
 | Adapter / discovery | Wallet interface | Coverage |
 | --- | --- | --- |
@@ -25,7 +25,7 @@ import {
 	ConnectClient, chains,
 	discoverEthereumWallets, ethereumAccountProvider, requestEthereumAccounts,
 	getSolanaWallets, solanaStandardAccountProvider, requestStandardAccounts,
-} from 'connect.js/wallet';
+} from 'connect-protocol/wallet';
 
 const discovery = discoverEthereumWallets(window, updateWalletPicker);
 const ethereumChoices = discovery.get();
@@ -59,7 +59,7 @@ await request.approve(request.accounts[0]);
 ## Phantom-style Solana
 
 ```ts
-import { ConnectClient, solanaAccountProvider } from 'connect.js/wallet';
+import { ConnectClient, solanaAccountProvider } from 'connect-protocol/wallet';
 
 // provider is the Solana provider selected by the user.
 await provider.connect(); // Explicit Connect-button action.
@@ -71,7 +71,7 @@ The adapter handles signature-byte encoding and checks the selected account befo
 ## Cardano and TRON
 
 ```ts
-import { cardanoAccountProvider, tronLinkAccountProvider } from 'connect.js/wallet';
+import { cardanoAccountProvider, tronLinkAccountProvider } from 'connect-protocol/wallet';
 
 const api = await selectedCardanoWallet.enable(); // User authorization.
 const cardano = cardanoAccountProvider(api);
@@ -90,7 +90,7 @@ Core Blockchain support is ready for a wallet implementation without assuming an
 import {
 	ConnectClient, coreAccountProvider, coreChain,
 	coreAddress, validateCoreAddress, verifyCoreSignature,
-} from 'connect.js/wallet';
+} from 'connect-protocol/wallet';
 
 const bridge = {
 	async getAccounts() {
@@ -122,7 +122,7 @@ The bridge is a Connect integration contract for wallet implementers, not a clai
 ## Other wallets and chains
 
 ```ts
-import { walletAccountProvider, chains } from 'connect.js/wallet';
+import { walletAccountProvider, chains } from 'connect-protocol/wallet';
 
 const accounts = walletAccountProvider({
 	chain: chains.stellar,

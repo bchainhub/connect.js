@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Bump the connect-protocol npm package to 0.1.1 for the coordinated Connect release.
+- Retain the CORE License.
+
 ## 0.1.0
 
 - Implement browser-only Connect authentication through the main `connect.js` import, with in-memory challenges, local verification, explicit wallet approval and single-use consumption.

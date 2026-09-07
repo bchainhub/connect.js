@@ -30,13 +30,13 @@ The service UUID uses the first 32 hex characters of requestId in UUID formattin
 
 ## Connect a device explicitly or on transfer
 
-All device helpers are exported from `connect.js`:
+All device helpers are exported from `connect-protocol`:
 
 ```ts
 import {
  connectBluetoothDevice, disconnectBluetoothDevice,
  isBluetoothDeviceConnected, receiveBluetoothResponse,
-} from 'connect.js';
+} from 'connect-protocol';
 
 // In the Connect device button handler:
 const device = await connectBluetoothDevice(handoff.ticket);
