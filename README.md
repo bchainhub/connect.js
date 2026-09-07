@@ -1,0 +1,2 @@
+# connect.js
+Connect Protocol
