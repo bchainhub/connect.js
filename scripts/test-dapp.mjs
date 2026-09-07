@@ -162,7 +162,7 @@ export async function testDapp(context, assetRoot) {
 		// A real Core signer registered through the same public host integration API.
 		await page.evaluate(async () => {
 			const { registerWallet } = await import('./wallets.js');
-			const { chains, coreAccountProvider } = await import('connect.js');
+			const { chains, coreAccountProvider } = await import('connect-protocol');
 			const { ed448, coreAddress } = await import('/helper.js');
 			const key = new Uint8Array(57).fill(1),
 				publicKey = ed448.getPublicKey(key);
@@ -189,7 +189,7 @@ export async function testDapp(context, assetRoot) {
 		await page.locator('#logout').click();
 		assert.equal(await page.locator('#dashboard').isHidden(), true);
 		await page.evaluate(async () => {
-			const { getStandardWallets } = await import('connect.js');
+			const { getStandardWallets } = await import('connect-protocol');
 			const { ed25519, base58 } = await import('/helper.js');
 			const key = new Uint8Array(32).fill(2),
 				publicKey = ed25519.getPublicKey(key);

@@ -10,7 +10,7 @@ import {
 	getSolanaWallets,
 	requestStandardAccounts,
 	solanaStandardAccountProvider,
-} from 'connect.js';
+} from 'connect-protocol';
 import { registerWallet, getWallets, onWalletsChanged } from './wallets.js';
 
 const element = (id) => document.getElementById(id);

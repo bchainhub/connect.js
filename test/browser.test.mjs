@@ -39,7 +39,7 @@ function injectedWallet() {
 	return { state, provider };
 }
 test('main import is the browser API and legacy HTTP APIs are absent', async () => {
-	const sdk = await import('connect.js');
+	const sdk = await import('connect-protocol');
 	assert.equal(typeof sdk.BrowserConnect, 'function');
 	for (const name of [
 		'ConnectEngine',
@@ -50,7 +50,7 @@ test('main import is the browser API and legacy HTTP APIs are absent', async () 
 	])
 		assert.ok(!(name in sdk));
 	for (const subpath of ['server', 'dapp', 'browser'])
-		await assert.rejects(import('connect.js/' + subpath), {
+		await assert.rejects(import('connect-protocol/' + subpath), {
 			code: 'ERR_PACKAGE_PATH_NOT_EXPORTED',
 		});
 });

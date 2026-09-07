@@ -1,6 +1,6 @@
 # Browser-only Connect
 
-`connect.js` creates challenges and verifies wallet proofs entirely in the browser. It needs no application server, database, blockchain node, RPC endpoint, Better Auth, or persistent storage. Each request lives in a JavaScript object and can be consumed once. Closing or reloading the page discards it.
+`connect-protocol` creates challenges and verifies wallet proofs entirely in the browser. It needs no application server, database, blockchain node, RPC endpoint, Better Auth, or persistent storage. Each request lives in a JavaScript object and can be consumed once. Closing or reloading the page discards it.
 
 The package ships a prebuilt ES module with browser compatibility code included. Import it through your bundler, or copy the entire `dist/browser/` directory into your static site and import `./browser/index.js`. Keep its adjacent JavaScript chunks and license notices. Monero's embedded WebAssembly loads on demand from a local static chunk; it does not contact a daemon. A static host only serves application files and runs no Connect backend. Monero requires WebAssembly execution to be permitted by the site or extension content security policy.
 
@@ -11,8 +11,8 @@ The [dapp example](../examples/dapp/README.md) adds wallet selection, account au
 ## Same browser or extension
 
 ```ts
-import { BrowserConnect, signBrowserChallenge } from 'connect.js';
-import { coreAccountProvider } from 'connect.js/wallet';
+import { BrowserConnect, signBrowserChallenge } from 'connect-protocol';
+import { coreAccountProvider } from 'connect-protocol/wallet';
 
 // Defaults to the page's HTTPS origin and all built-in chains.
 const connect = new BrowserConnect();
@@ -33,7 +33,7 @@ An extension can exchange the challenge and proof through its messaging API. It 
 
 ## QR without a backend
 
-A short `connect://domain/connect/v1/id` link needs an external lookup transport; connect.js does not supply one. For serverless QR, transmit the **full challenge**:
+A short `connect://domain/connect/v1/id` link needs an external lookup transport; connect-protocol does not supply one. For serverless QR, transmit the **full challenge**:
 
 ```ts
 // Originating browser: retain request in memory.
@@ -45,7 +45,7 @@ const challengePayload = request.exportChallenge();
 // Wallet: parse the scanned payload and show the challenge for approval.
 import {
 	decodeBrowserChallenge, signBrowserChallenge, encodeBrowserProof,
-} from 'connect.js';
+} from 'connect-protocol';
 
 const challenge = decodeBrowserChallenge(scannedPayload, expectedOrigin);
 // After explicit user approval:
@@ -71,7 +71,7 @@ Requests expire after two minutes by default (configurable from one second to fi
 
 All built-in profiles are available, with the same [chain/address restrictions](CHAINS.md) as server verification: Core Blockchain, Ethereum, Polygon, Base, Bitcoin, Solana, BNB Smart Chain, TRON, Monero, Stellar, Litecoin, XRP, Zcash and Cardano. This proves control of supported signing keys; it does not query balances, token holdings, transactions, smart-contract account state, or chain history. Custom profiles can be supplied through `ProfileRegistry` and `defineSigningProfile`.
 
-Local verification establishes identity for the current browser application. An application protecting server resources must independently authenticate requests on that server; a browser result does not create a trusted server session. The separate better-connect package owns Better Auth endpoints and session storage; connect.js has no server implementation.
+Local verification establishes identity for the current browser application. An application protecting server resources must independently authenticate requests on that server; a browser result does not create a trusted server session. The separate better-connect package owns Better Auth endpoints and session storage; connect-protocol has no server implementation.
 
 ## Verification
 

@@ -53,13 +53,13 @@ try {
 		`
 		import assert from 'node:assert/strict';
 		import { readFileSync } from 'node:fs';
-		import * as sdk from 'connect.js';
-		import * as wallet from 'connect.js/wallet';
+		import * as sdk from 'connect-protocol';
+		import * as wallet from 'connect-protocol/wallet';
 		for (const name of ['BrowserConnect','signBrowserChallenge','ProfileRegistry','coreAccountProvider','ethereumAccountProvider']) assert.equal(typeof sdk[name],'function');
 		assert.equal(typeof wallet.coreAccountProvider,'function');
 		for (const name of ['ConnectEngine','MemoryRequestStore','createConnectServer','ConnectDappClient','HttpsNetwork']) assert.ok(!(name in sdk));
-		for (const subpath of ['server','dapp','browser','evm']) await assert.rejects(import('connect.js/'+subpath), {code:'ERR_PACKAGE_PATH_NOT_EXPORTED'});
-		const manifest=JSON.parse(readFileSync(new URL('./node_modules/connect.js/package.json',import.meta.url)));
+		for (const subpath of ['server','dapp','browser','evm']) await assert.rejects(import('connect-protocol/'+subpath), {code:'ERR_PACKAGE_PATH_NOT_EXPORTED'});
+		const manifest=JSON.parse(readFileSync(new URL('./node_modules/connect-protocol/package.json',import.meta.url)));
 		assert.ok(!manifest.engines);
 		assert.ok(!manifest.dependencies['monero-ts']);
 		assert.ok(!manifest.bundleDependencies);
@@ -75,13 +75,13 @@ try {
 		process.execPath,
 		[
 			fileURLToPath(new URL('./test-browser.mjs', import.meta.url)),
-			join(directory, 'node_modules/connect.js'),
+			join(directory, 'node_modules/connect-protocol'),
 		],
 		{ stdio: 'inherit' },
 	);
 	await writeFile(
 		join(directory, 'consumer.ts'),
-		`import { BrowserConnect, signBrowserChallenge, type WalletAccount } from 'connect.js';\nimport { ProfileRegistry } from 'connect.js/verification';\ndeclare const account: WalletAccount;\nconst request = new BrowserConnect({registry:new ProfileRegistry()}).create();\nawait request.verify(await signBrowserChallenge(request.challenge, account));\n`,
+		`import { BrowserConnect, signBrowserChallenge, type WalletAccount } from 'connect-protocol';\nimport { ProfileRegistry } from 'connect-protocol/verification';\ndeclare const account: WalletAccount;\nconst request = new BrowserConnect({registry:new ProfileRegistry()}).create();\nawait request.verify(await signBrowserChallenge(request.challenge, account));\n`,
 	);
 	execFileSync(
 		process.execPath,

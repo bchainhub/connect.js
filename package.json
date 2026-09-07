@@ -1,6 +1,6 @@
 {
-	"name": "connect.js",
-	"version": "0.1.0",
+	"name": "connect-protocol",
+	"version": "0.1.1",
 	"description": "Browser-only Connect authentication and multi-chain wallet adapters",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
