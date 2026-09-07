@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Publish npm when a GitHub Release is published in the app.
+- Remove duplicate GitHub Release creation from the publishing workflow.
+
 ## 0.1.1
 
 - Bump the connect-protocol npm package to 0.1.1 for the coordinated Connect release.

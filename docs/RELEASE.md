@@ -1,11 +1,13 @@
 # Release setup
 
-CI runs formatting/linting, static checks, relevant tests and package validation. Flutter additionally builds Android and iOS simulator examples. better-connect's release also runs cross-repository Flutter interoperability. No release has been pushed or published as part of implementation.
+CI runs formatting/linting, static checks, relevant tests and package validation. Flutter additionally builds Android and iOS simulator examples. better-connect's release also runs cross-repository Flutter interoperability.
 
 1. Review the package version and changelog. Keep v1 protocol vectors identical across all three repositories.
-2. Configure repository Actions and the registry's trusted publisher for `bchainhub/connect.js` and `release.yml`. For npm use its GitHub OIDC trusted publishing settings; for pub.dev enable automated GitHub publishing with the `{{version}}` tag pattern. Initial package creation/ownership and registry settings must be established by maintainers.
+2. Configure repository Actions and the registry's trusted publisher for `bchainhub/connect.js` and `release.yml`. Use npm GitHub OIDC trusted publishing and allow direct `npm publish`. Initial package creation/ownership and registry settings must be established by maintainers.
 3. Ensure dependent repositories are pushed before cross-repository CI runs. For incompatible future protocol changes pin the integration checkout to a matching release rather than silently mixing versions.
-4. Push `<version>` to trigger validation, publication and a GitHub release. The tag must match the manifest exactly.
+4. Create and publish the GitHub Release in the app using tag `<version>` (for example, `0.1.1`, without `v`). Publishing the release triggers validation and npm publication. Saving a draft or pushing a tag alone does not publish npm. The release tag must match the package manifest exactly. The workflow uses the existing GitHub Release and never creates another one.
+
+Only publish a version that is not already on npm. Rerunning publication for an existing npm version will fail; a GitHub Release does not make npm versions replaceable. Flutter's pub.dev workflow remains tag-triggered.
 
 CORE License text is copied unchanged from the reference flutter_txms repository. npm metadata uses `SEE LICENSE IN LICENSE` because CORE is a custom license.
 
