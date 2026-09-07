@@ -1,0 +1,1 @@
+export { toCanvas } from 'qrcode';

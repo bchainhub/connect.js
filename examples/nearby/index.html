@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<meta charset="utf-8" /><meta
+		name="viewport"
+		content="width=device-width"
+	/><title>Connect nearby wallet</title>
+	<script type="importmap">
+		{
+			"imports": {
+				"connect.js": "../../dist/browser/index.js",
+				"qrcode": "../../dist/browser/qr.js"
+			}
+		}
+	</script>
+	<body>
+		<h1>Connect a nearby wallet</h1>
+		<p>
+			Scan with your wallet, confirm this website in the app, enable Bluetooth,
+			and approve signing. Keep the wallet open.
+		</p>
+		<button id="create">New request</button><canvas id="qr"></canvas>
+		<p><a id="link">Open wallet on this device</a></p>
+		<button id="connect" disabled>Connect device</button>
+		<button id="bluetooth" disabled>Receive via Bluetooth</button>
+		<p>Alternatively, paste the encrypted response returned by the wallet:</p>
+		<textarea
+			id="response"
+			rows="6"
+			cols="70"
+			aria-label="Encrypted wallet response"
+		></textarea
+		><button id="accept" disabled>Verify response</button>
+		<pre id="status" role="status"></pre>
+		<script type="module" src="app.js"></script>
+	</body>
+</html>

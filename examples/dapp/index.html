@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Connect dapp example</title>
+		<script type="importmap">
+			{ "imports": { "connect.js": "../../dist/browser/index.js" } }
+		</script>
+		<style>
+			:root {
+				color-scheme: light dark;
+				font-family: system-ui, sans-serif;
+			}
+			body {
+				max-width: 48rem;
+				margin: 3rem auto;
+				padding: 0 1rem;
+				line-height: 1.5;
+			}
+			section {
+				border: 1px solid #8886;
+				border-radius: 0.75rem;
+				padding: 1.25rem;
+				margin: 1.5rem 0;
+			}
+			label {
+				display: block;
+				margin: 1rem 0 0.25rem;
+			}
+			select {
+				width: 100%;
+			}
+			button,
+			select {
+				font: inherit;
+				padding: 0.6rem;
+				border-radius: 0.3rem;
+			}
+			button {
+				margin: 1rem 0.3rem 0 0;
+				cursor: pointer;
+			}
+			button:disabled {
+				cursor: default;
+			}
+			pre {
+				white-space: pre-wrap;
+				overflow-wrap: anywhere;
+				font-size: 0.85rem;
+			}
+			#identity,
+			#status {
+				overflow-wrap: anywhere;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Sign in with your wallet</h1>
+		<p>
+			A dapp example using Connect. Your signature is verified in this browser.
+			No backend or database is involved.
+		</p>
+		<section aria-label="Choose wallet">
+			<label for="wallet">Wallet</label
+			><select id="wallet"></select>
+			<label for="network">Network</label
+			><select id="network"></select>
+			<button id="refresh" type="button">Refresh wallets</button>
+			<button id="connect" type="button" disabled>Connect wallet</button>
+			<button id="cancel" type="button" disabled>Cancel / disconnect</button>
+		</section>
+		<section id="review" hidden aria-label="Review sign-in">
+			<h2>Review your sign-in</h2>
+			<p>
+				Website: <strong id="origin"></strong><br />Request expires at
+				<span id="expires"></span>.
+			</p>
+			<label for="account">Account</label
+			><select id="account"></select>
+			<details>
+				<summary>Exact message your wallet will sign</summary>
+				<pre id="message"></pre>
+			</details>
+			<button id="sign" type="button" disabled>Sign in</button>
+		</section>
+		<p id="status" role="status" aria-live="polite">
+			Looking for compatible wallets…
+		</p>
+		<section id="dashboard" hidden aria-label="Signed-in view">
+			<h2>Wallet verified</h2>
+			<p id="identity"></p>
+			<p>
+				This is your local dapp identity. Reloading or signing out clears it.
+			</p>
+			<button id="logout" type="button">Sign out</button>
+		</section>
+		<p>
+			Ethereum-compatible wallets are discovered through EIP-6963; Solana
+			wallets through Wallet Standard. Your wallet must support message signing.
+			Other wallets can be added through the example's integration registry.
+		</p>
+		<p>
+			For a wallet on another device, see the
+			<a href="../browser-only.html">manual request/response example</a>.
+		</p>
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>

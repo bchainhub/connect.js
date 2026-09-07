@@ -1,0 +1,1829 @@
+[
+	{
+		"name": "xcb-ed448",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"namespace": "core",
+					"reference": "1",
+					"profile": "xcb-ed448",
+					"alg": -53
+				},
+				{
+					"namespace": "raw",
+					"reference": "ed25519",
+					"profile": "raw-ed25519",
+					"alg": -19
+				},
+				{
+					"namespace": "eip155",
+					"reference": "1",
+					"profile": "ethereum-siwe",
+					"alg": null
+				},
+				{
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "core",
+				"reference": "1",
+				"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+			},
+			"profile": "xcb-ed448",
+			"alg": -53,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"publicKey": "e0758a33267939a394fb5ccb202ee851cebc2e89c91ac1289e2bfcddfd9ff9fc5694b0f569d7f7e9da16e1cde9301b29f48128b3cbd1168580",
+			"signature": "143d579070c935d46a28952a77589bd531f83f34636d71acfba8b4e8e4b1c39de5b1addb807be9d0e54d625de95959d2f32514669ae1c24a80acc763bafe645b0fe1c094d4812c5d29035e1a1c52356f6b8538f550dd2731acf247232af37364c2c34f5218076f257b1b75d2f701febf1c00"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: core:1:cb23f5e89ba978317da861b7ad06ba3103d41c876098\nProfile: xcb-ed448\nAlgorithm: -53\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a20636f72653a313a63623233663565383962613937383331376461383631623761643036626133313033643431633837363039380a50726f66696c653a207863622d65643434380a416c676f726974686d3a202d35330a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"testSeed": "010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+		"valid": true
+	},
+	{
+		"name": "raw-ed25519",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"namespace": "core",
+					"reference": "1",
+					"profile": "xcb-ed448",
+					"alg": -53
+				},
+				{
+					"namespace": "raw",
+					"reference": "ed25519",
+					"profile": "raw-ed25519",
+					"alg": -19
+				},
+				{
+					"namespace": "eip155",
+					"reference": "1",
+					"profile": "ethereum-siwe",
+					"alg": null
+				},
+				{
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "raw",
+				"reference": "ed25519",
+				"address": "8a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c"
+			},
+			"profile": "raw-ed25519",
+			"alg": -19,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"publicKey": "8a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c",
+			"signature": "9d711214892c0d6fb909b3b2c6434a13350244335921a0df612d1dcf9c2ba64288d3232b4e1f902b122c6a294f5a47aa81f62cfa1189f675c9875b799713f801"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: raw:ed25519:8a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c\nProfile: raw-ed25519\nAlgorithm: -19\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a207261773a656432353531393a386138386533646437343039663139356664353264623264336362613564373263613637303962663164393431323162663337343838303162343066366635630a50726f66696c653a207261772d656432353531390a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"testSeed": "0101010101010101010101010101010101010101010101010101010101010101",
+		"valid": true
+	},
+	{
+		"name": "ethereum-siwe",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"namespace": "core",
+					"reference": "1",
+					"profile": "xcb-ed448",
+					"alg": -53
+				},
+				{
+					"namespace": "raw",
+					"reference": "ed25519",
+					"profile": "raw-ed25519",
+					"alg": -19
+				},
+				{
+					"namespace": "eip155",
+					"reference": "1",
+					"profile": "ethereum-siwe",
+					"alg": null
+				},
+				{
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "eip155",
+				"reference": "1",
+				"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+			},
+			"profile": "ethereum-siwe",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "0xec4ab3e1544ebf537ff3bb1ea22d5ce078789aa09f41801271a7d089b3ce9e5b15db95d4896a9e684c6bd0c97548634a28630ded8b48fe2ee22735620c63c0571c"
+		},
+		"canonical": "example.com wants you to sign in with your Ethereum account:\n0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1\n\nApprove this Connect sign-in request.\n\nURI: https://example.com\nVersion: 1\nChain ID: 1\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nResources:\n- urn:connect:version:1\n- urn:connect:profile:ethereum-siwe\n- urn:connect:alg:none\n- urn:connect:account:eip155:1:0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+		"canonicalHex": "6578616d706c652e636f6d2077616e747320796f7520746f207369676e20696e207769746820796f757220457468657265756d206163636f756e743a0a3078316136343266304533633361463534354537416342443338623037323531423339393039313446310a0a417070726f7665207468697320436f6e6e656374207369676e2d696e20726571756573742e0a0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a56657273696f6e3a20310a436861696e2049443a20310a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a0a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a5265736f75726365733a0a2d2075726e3a636f6e6e6563743a76657273696f6e3a310a2d2075726e3a636f6e6e6563743a70726f66696c653a657468657265756d2d736977650a2d2075726e3a636f6e6e6563743a616c673a6e6f6e650a2d2075726e3a636f6e6e6563743a6163636f756e743a6569703135353a313a307831613634326630453363336146353435453741634244333862303732353142333939303931344631",
+		"valid": true
+	},
+	{
+		"name": "bitcoin-bip322-p2wpkh",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"namespace": "core",
+					"reference": "1",
+					"profile": "xcb-ed448",
+					"alg": -53
+				},
+				{
+					"namespace": "raw",
+					"reference": "ed25519",
+					"profile": "raw-ed25519",
+					"alg": -19
+				},
+				{
+					"namespace": "eip155",
+					"reference": "1",
+					"profile": "ethereum-siwe",
+					"alg": null
+				},
+				{
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "bip122",
+				"reference": "000000000019d6689c085ae165831e93",
+				"address": "bc1q0xcqpzrky6eff2g52qdye53xkk9jxkvrh6yhyw"
+			},
+			"profile": "bitcoin-bip322-p2wpkh",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "AkcwRAIgCKKfedpfI8vEagm9Z3PH1zTGm71UDNVFcAF/KqT+SVcCIHfvlJdFGCIsyp9Sf5PnwWk07Wv8xEUn/YT1H2Xo+8y0ASEDG4TFVnsSZECZXT7VqroFZdceGDRgSBn/nBf16dXdB48="
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: bip122:000000000019d6689c085ae165831e93:bc1q0xcqpzrky6eff2g52qdye53xkk9jxkvrh6yhyw\nProfile: bitcoin-bip322-p2wpkh\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a206269703132323a30303030303030303030313964363638396330383561653136353833316539333a6263317130786371707a726b793665666632673532716479653533786b6b396a786b76726836796879770a50726f66696c653a20626974636f696e2d6269703332322d703277706b680a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Polygon",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "eip155",
+				"reference": "137",
+				"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+			},
+			"profile": "ethereum-siwe",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "0x6edace48e7ae196e8f3a1dd82472e8b5f453fb856d213443d70848ffe38ba0480f2b9ddba1652b10b3b8ce644158d1c43b0da61e47e5132071df11a2774a47fe1b"
+		},
+		"canonical": "example.com wants you to sign in with your Ethereum account:\n0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1\n\nApprove this Connect sign-in request.\n\nURI: https://example.com\nVersion: 1\nChain ID: 137\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nResources:\n- urn:connect:version:1\n- urn:connect:profile:ethereum-siwe\n- urn:connect:alg:none\n- urn:connect:account:eip155:137:0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+		"canonicalHex": "6578616d706c652e636f6d2077616e747320796f7520746f207369676e20696e207769746820796f757220457468657265756d206163636f756e743a0a3078316136343266304533633361463534354537416342443338623037323531423339393039313446310a0a417070726f7665207468697320436f6e6e656374207369676e2d696e20726571756573742e0a0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a56657273696f6e3a20310a436861696e2049443a203133370a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a0a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a5265736f75726365733a0a2d2075726e3a636f6e6e6563743a76657273696f6e3a310a2d2075726e3a636f6e6e6563743a70726f66696c653a657468657265756d2d736977650a2d2075726e3a636f6e6e6563743a616c673a6e6f6e650a2d2075726e3a636f6e6e6563743a6163636f756e743a6569703135353a3133373a307831613634326630453363336146353435453741634244333862303732353142333939303931344631",
+		"valid": true
+	},
+	{
+		"name": "Base",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "eip155",
+				"reference": "8453",
+				"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+			},
+			"profile": "ethereum-siwe",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "0x77909f3f8eef0684981d519f53bc82aa6911fd49bab9f7c25a536c0f9230348e43736cb75ec9bedcbdfa48c34826a9b9741ad6bace449364da1925a33206e2fd1b"
+		},
+		"canonical": "example.com wants you to sign in with your Ethereum account:\n0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1\n\nApprove this Connect sign-in request.\n\nURI: https://example.com\nVersion: 1\nChain ID: 8453\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nResources:\n- urn:connect:version:1\n- urn:connect:profile:ethereum-siwe\n- urn:connect:alg:none\n- urn:connect:account:eip155:8453:0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+		"canonicalHex": "6578616d706c652e636f6d2077616e747320796f7520746f207369676e20696e207769746820796f757220457468657265756d206163636f756e743a0a3078316136343266304533633361463534354537416342443338623037323531423339393039313446310a0a417070726f7665207468697320436f6e6e656374207369676e2d696e20726571756573742e0a0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a56657273696f6e3a20310a436861696e2049443a20383435330a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a0a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a5265736f75726365733a0a2d2075726e3a636f6e6e6563743a76657273696f6e3a310a2d2075726e3a636f6e6e6563743a70726f66696c653a657468657265756d2d736977650a2d2075726e3a636f6e6e6563743a616c673a6e6f6e650a2d2075726e3a636f6e6e6563743a6163636f756e743a6569703135353a383435333a307831613634326630453363336146353435453741634244333862303732353142333939303931344631",
+		"valid": true
+	},
+	{
+		"name": "BNB Smart Chain",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "eip155",
+				"reference": "56",
+				"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+			},
+			"profile": "ethereum-siwe",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "0x72cc3a6639abcd8a22862c77daaaba4979be8056df2a95fe73fd049a28d9e5286ea99fe03f589a57b7855131bd6cf21e33ba440bbd860fd1cc8e8e29ee5ac5b01c"
+		},
+		"canonical": "example.com wants you to sign in with your Ethereum account:\n0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1\n\nApprove this Connect sign-in request.\n\nURI: https://example.com\nVersion: 1\nChain ID: 56\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nResources:\n- urn:connect:version:1\n- urn:connect:profile:ethereum-siwe\n- urn:connect:alg:none\n- urn:connect:account:eip155:56:0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+		"canonicalHex": "6578616d706c652e636f6d2077616e747320796f7520746f207369676e20696e207769746820796f757220457468657265756d206163636f756e743a0a3078316136343266304533633361463534354537416342443338623037323531423339393039313446310a0a417070726f7665207468697320436f6e6e656374207369676e2d696e20726571756573742e0a0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a56657273696f6e3a20310a436861696e2049443a2035360a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a0a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a5265736f75726365733a0a2d2075726e3a636f6e6e6563743a76657273696f6e3a310a2d2075726e3a636f6e6e6563743a70726f66696c653a657468657265756d2d736977650a2d2075726e3a636f6e6e6563743a616c673a6e6f6e650a2d2075726e3a636f6e6e6563743a6163636f756e743a6569703135353a35363a307831613634326630453363336146353435453741634244333862303732353142333939303931344631",
+		"valid": true
+	},
+	{
+		"name": "Solana",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "solana",
+				"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+				"address": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+			},
+			"profile": "solana-ed25519",
+			"alg": -19,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "32b1340bd39579a44d2f91d38a09d91a6ff1047cff14672e06dcbc935aeefeba1c6bfd98001d043296c0fb3a927746f2fe417ca3d7ad0c10ca79cfe43a2adf00"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp:AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9\nProfile: solana-ed25519\nAlgorithm: -19\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a20736f6c616e613a3565796b7434557346763850384e4a64545245705931767a714b715a4b7664703a414b6e4c344e4e66334447575a4a533663506b6e427545476e5673563441346d35746765624c486152535a390a50726f66696c653a20736f6c616e612d656432353531390a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "TRON",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "tron",
+				"reference": "728126428",
+				"address": "TCNkawTmcQgYSU8nP8cHswT1QPjharxJr7"
+			},
+			"profile": "tron-signmessage-v2",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "0xa2c88cc0652ee7ee9d868a9a6a29d8657c11578050047475747c1da905cbab5f45422425ee5d7292ca0d7d5c3dbca06f31110c12dd855bfdd1b54bbdf6656d0e1b"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: tron:728126428:TCNkawTmcQgYSU8nP8cHswT1QPjharxJr7\nProfile: tron-signmessage-v2\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a2074726f6e3a3732383132363432383a54434e6b6177546d635167595355386e503863487377543151506a686172784a72370a50726f66696c653a2074726f6e2d7369676e6d6573736167652d76320a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Monero",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "monero",
+				"reference": "418015bb9ae982a1975da7d79277c270",
+				"address": "44yQXfkWZNmJ8QgRfFWTzmJ8QgRfFWTzmJ8QgRfFWTzmJ9HskYAEKgjVy4kd3K4MaxERLtGa7FFrVNLF3jYWyjHCFA3tNHB"
+			},
+			"profile": "monero-spend-v2",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "SigV2RBp4qz9y95naAds3unpCzng6iAKY8MM37a9z5usjye6RQCefRve4veebYzZ5b3gYnJJWPCwjW8BTrCYVy1utVVPG"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: monero:418015bb9ae982a1975da7d79277c270:44yQXfkWZNmJ8QgRfFWTzmJ8QgRfFWTzmJ8QgRfFWTzmJ9HskYAEKgjVy4kd3K4MaxERLtGa7FFrVNLF3jYWyjHCFA3tNHB\nProfile: monero-spend-v2\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a206d6f6e65726f3a34313830313562623961653938326131393735646137643739323737633237303a3434795158666b575a4e6d4a38516752664657547a6d4a38516752664657547a6d4a38516752664657547a6d4a3948736b5941454b676a5679346b64334b344d617845524c74476137464672564e4c46336a5957796a4843464133744e48420a50726f66696c653a206d6f6e65726f2d7370656e642d76320a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Stellar",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "stellar",
+				"reference": "pubnet",
+				"address": "GCFIRY65OQE7DFP5KLNS2PF2LVZMUZYJX4OZIEQ36N2IQANUB5XVYOJR"
+			},
+			"profile": "stellar-sep53",
+			"alg": -19,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "6e97ca22f5d1a88fa4563d50cac9dfa7ef58dbbb0ace420aac4388aaf10b51aa4265b3583e26c3c674a63fada018e051317bb1c9022af67480826b9bcfccae0b"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: stellar:pubnet:GCFIRY65OQE7DFP5KLNS2PF2LVZMUZYJX4OZIEQ36N2IQANUB5XVYOJR\nProfile: stellar-sep53\nAlgorithm: -19\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a207374656c6c61723a7075626e65743a47434649525936354f514537444650354b4c4e53325046324c565a4d555a594a58344f5a49455133364e324951414e5542355856594f4a520a50726f66696c653a207374656c6c61722d73657035330a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Litecoin",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "bip122",
+				"reference": "12a765e31ffd4059bada1e25190f6e98",
+				"address": "LWKNsGErA9XxsrKVPimDAbuRXjCyyazZtc"
+			},
+			"profile": "litecoin-signmessage",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "H3ncdVReM2oEiTYg3y/c8T7HoeqRD+wcxZLN2pDYwfOiRxJHoxDv6KiWloFGm0zNiRdsoctU67qCkRrtUwTaI/U="
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: bip122:12a765e31ffd4059bada1e25190f6e98:LWKNsGErA9XxsrKVPimDAbuRXjCyyazZtc\nProfile: litecoin-signmessage\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a206269703132323a31326137363565333166666434303539626164613165323531393066366539383a4c574b4e734745724139587873724b5650696d4441627552586a437979617a5a74630a50726f66696c653a206c697465636f696e2d7369676e6d6573736167650a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "XRP Ledger",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "xrpl",
+				"reference": "0",
+				"address": "rMPrYipfRHJryWfwYARAwhsVGvHwpUDjgA"
+			},
+			"profile": "xrpl-secp256k1",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "304402207c3047b906662a362b87e267d3deef6274437c56bbe9ca2970ef47573ca9d718022051b30802c6796870632ea421126dc1b1480969418c34fa5e4d524d596fd1b749",
+			"publicKey": "035a7fa22521397be0ffe9cd7c35dde0fb0c8ea96e48ff84e0c6309d0d4d70d9ea"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: xrpl:0:rMPrYipfRHJryWfwYARAwhsVGvHwpUDjgA\nProfile: xrpl-secp256k1\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a207872706c3a303a724d50725969706652484a72795766775941524177687356477648777055446a67410a50726f66696c653a207872706c2d736563703235366b310a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Zcash",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "bip122",
+				"reference": "00040fe8ec8471911baa1db1266ea15d",
+				"address": "t1Uy2cPMA3p5WDggEA1b32PwaaB2nfDssvp"
+			},
+			"profile": "zcash-signmessage",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "IFUKutZSC710SyDQ25+apzr4ABN3KiMPI88PWWRdkAL7R8cmIcEqU7RyZtTu3fYtBDYUjRm1UOiL9+CZKfuF0xE="
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: bip122:00040fe8ec8471911baa1db1266ea15d:t1Uy2cPMA3p5WDggEA1b32PwaaB2nfDssvp\nProfile: zcash-signmessage\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a206269703132323a30303034306665386563383437313931316261613164623132363665613135643a743155793263504d41337035574467674541316233325077616142326e6644737376700a50726f66696c653a207a636173682d7369676e6d6573736167650a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Cardano",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "cip34",
+				"reference": "1-764824073",
+				"address": "addr1vyxk54m7j3q6mrkevcunryrwf4p7e68c93cjk8gzxkhlkpsjpczl2"
+			},
+			"profile": "cardano-cip8",
+			"alg": -19,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "84582aa201276761646472657373581d610d6a577e9441ad8ed9663931906e4d43ece8f82c712b1d0235affb06a166686173686564f45901ac436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a2063697033343a312d3736343832343037333a61646472317679786b35346d376a3371366d726b657663756e7279727766347037653638633933636a6b38677a786b686c6b70736a70637a6c320a50726f66696c653a2063617264616e6f2d636970380a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a5840e8f2cae247740ea10649edf235f1c112efa54e84df2125ffba0f608b0e7cb896f5018199bfa196ce3756fdbb0ac9c193176ff851055713a3d2c194ca3fc44203",
+			"publicKey": "a40101032720062158208a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: cip34:1-764824073:addr1vyxk54m7j3q6mrkevcunryrwf4p7e68c93cjk8gzxkhlkpsjpczl2\nProfile: cardano-cip8\nAlgorithm: -19\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a2063697033343a312d3736343832343037333a61646472317679786b35346d376a3371366d726b657663756e7279727766347037653638633933636a6b38677a786b686c6b70736a70637a6c320a50726f66696c653a2063617264616e6f2d636970380a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "Bitcoin (legacy P2PKH)",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "bip122",
+				"reference": "000000000019d6689c085ae165831e93",
+				"address": "1C6Rc3w25VHud3dLDamutaqfKWqhrLRTaD"
+			},
+			"profile": "bitcoin-signmessage",
+			"alg": null,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "IDcmKBr0cwOhdmuYIIcrdlInNQ/KI6+9Kax4G/Yb0EzOfDgOTAMEl1bQI2kzC9402voJAav94MjWZaUB1bBrFRY="
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: bip122:000000000019d6689c085ae165831e93:1C6Rc3w25VHud3dLDamutaqfKWqhrLRTaD\nProfile: bitcoin-signmessage\nAlgorithm: none\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a206269703132323a30303030303030303030313964363638396330383561653136353833316539333a3143365263337732355648756433644c44616d75746171664b577168724c525461440a50726f66696c653a20626974636f696e2d7369676e6d6573736167650a416c676f726974686d3a206e6f6e650a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	},
+	{
+		"name": "XRP Ledger (Ed25519)",
+		"challenge": {
+			"version": 1,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+			"domain": "example.com",
+			"origin": "https://example.com",
+			"issuedAt": "2026-09-07T10:00:00.000Z",
+			"expiresAt": "2026-09-07T10:02:00.000Z",
+			"requirements": [
+				{
+					"profile": "xcb-ed448",
+					"alg": -53,
+					"namespace": "core",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				{
+					"profile": "ethereum-siwe",
+					"alg": null,
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				{
+					"profile": "bitcoin-bip322-p2wpkh",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "solana-ed25519",
+					"alg": -19,
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				{
+					"profile": "tron-signmessage-v2",
+					"alg": null,
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				{
+					"profile": "monero-spend-v2",
+					"alg": null,
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				{
+					"profile": "stellar-sep53",
+					"alg": -19,
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				{
+					"profile": "litecoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				{
+					"profile": "xrpl-secp256k1",
+					"alg": null,
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				{
+					"profile": "zcash-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				{
+					"profile": "cardano-cip8",
+					"alg": -19,
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				{
+					"profile": "bitcoin-signmessage",
+					"alg": null,
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				{
+					"profile": "xrpl-ed25519",
+					"alg": -19,
+					"namespace": "xrpl",
+					"reference": "0"
+				}
+			]
+		},
+		"proof": {
+			"account": {
+				"namespace": "xrpl",
+				"reference": "0",
+				"address": "r3sNTMefq5gsRumMYsNznnX6yzzxVH6dTC"
+			},
+			"profile": "xrpl-ed25519",
+			"alg": -19,
+			"requestId": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+			"signature": "d68225ada67d42a9183d09d0858553590023102ceefa4fbf73a7835f6a35ab280b2dd65004f40ee558545c4dcbccc962763183d2c904307fd85cbb8573f3db04",
+			"publicKey": "ed06895bec3fde4090f06d840770d888d49e3089b3757c4285e3851bc33964e0f9"
+		},
+		"canonical": "Connect Authentication\nVersion: 1\nDomain: example.com\nURI: https://example.com\nAccount: xrpl:0:r3sNTMefq5gsRumMYsNznnX6yzzxVH6dTC\nProfile: xrpl-ed25519\nAlgorithm: -19\nNonce: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nRequest ID: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nIssued At: 2026-09-07T10:00:00.000Z\nExpiration Time: 2026-09-07T10:02:00.000Z",
+		"canonicalHex": "436f6e6e6563742041757468656e7469636174696f6e0a56657273696f6e3a20310a446f6d61696e3a206578616d706c652e636f6d0a5552493a2068747470733a2f2f6578616d706c652e636f6d0a4163636f756e743a207872706c3a303a7233734e544d65667135677352756d4d59734e7a6e6e5836797a7a785648366454430a50726f66696c653a207872706c2d656432353531390a416c676f726974686d3a202d31390a4e6f6e63653a20626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262620a526571756573742049443a20616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161610a4973737565642041743a20323032362d30392d30375431303a30303a30302e3030305a0a45787069726174696f6e2054696d653a20323032362d30392d30375431303a30323a30302e3030305a",
+		"valid": true
+	}
+]

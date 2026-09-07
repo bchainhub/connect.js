@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Connect — browser-only sign-in</title>
+		<style>
+			body {
+				font:
+					16px system-ui,
+					sans-serif;
+				max-width: 48rem;
+				margin: 3rem auto;
+				padding: 0 1rem;
+			}
+			label,
+			textarea,
+			output {
+				display: block;
+				margin: 1rem 0 0.5rem;
+			}
+			textarea {
+				box-sizing: border-box;
+				width: 100%;
+				min-height: 10rem;
+			}
+			button,
+			select {
+				font: inherit;
+				padding: 0.5rem;
+			}
+			output {
+				overflow-wrap: anywhere;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Connect with your wallet</h1>
+		<p>
+			Create a sign-in request, send it to a compatible wallet, and paste its
+			signed response here. Verification happens in this browser.
+		</p>
+		<label for="chain">Blockchain</label>
+		<select id="chain">
+			<option value="all">All supported blockchains</option>
+		</select>
+		<button id="create" type="button">Create request</button>
+		<label for="challenge">Request to send to your wallet</label>
+		<textarea id="challenge" readonly></textarea>
+		<label for="proof">Signed response from your wallet</label>
+		<textarea id="proof" spellcheck="false"></textarea>
+		<button id="verify" type="button" disabled>Verify response</button>
+		<button id="cancel" type="button" disabled>Cancel request</button>
+		<output id="result" role="status" aria-live="polite"></output>
+		<p>Keep this page open until you finish. Reloading discards the request.</p>
+		<script type="module">
+			import { BrowserConnect, allChains } from '../dist/browser/index.js';
+			const field = (id) => document.getElementById(id);
+			for (const [index, chain] of allChains.entries()) {
+				field('chain').add(new Option(chain.name, String(index)));
+			}
+			let request;
+			function report(error) {
+				field('result').textContent =
+					`Could not complete sign-in: ${error.message}`;
+			}
+			field('create').onclick = () => {
+				try {
+					if (request?.status === 'PENDING') request.cancel();
+					const choice = field('chain').value;
+					request = new BrowserConnect({
+						chains: choice === 'all' ? allChains : [allChains[Number(choice)]],
+					}).create();
+					field('challenge').value = request.exportChallenge();
+					field('proof').value = '';
+					field('result').textContent = 'Waiting for your wallet response.';
+					field('verify').disabled = field('cancel').disabled = false;
+				} catch (error) {
+					report(error);
+				}
+			};
+			field('verify').onclick = async () => {
+				const activeRequest = request;
+				field('verify').disabled = true;
+				try {
+					const account = await activeRequest.verify(field('proof').value);
+					if (request !== activeRequest) return;
+					field('result').textContent =
+						`Verified ${account.namespace}:${account.reference}:${account.address}`;
+					field('cancel').disabled = true;
+				} catch (error) {
+					if (request !== activeRequest) return;
+					report(error);
+					field('verify').disabled = request?.status !== 'PENDING';
+				}
+			};
+			field('cancel').onclick = () => {
+				try {
+					request.cancel();
+					field('verify').disabled = field('cancel').disabled = true;
+					field('result').textContent = 'Request cancelled.';
+				} catch (error) {
+					report(error);
+				}
+			};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+name: Feature request
+description: Suggest an improvement
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and security considerations
