@@ -12,6 +12,9 @@ const assetRoot = process.argv[2]
 const fixtures = JSON.parse(
 	await readFile(new URL('test/fixtures/conformance.json', assetRoot)),
 );
+const walletFixtures = JSON.parse(
+	await readFile(new URL('test/fixtures/wallet-validation.json', assetRoot)),
+);
 const helper = await build({
 	stdin: {
 		contents: `export { ed448 } from '@noble/curves/ed448.js'; export { ed25519 } from '@noble/curves/ed25519.js'; export { base58 } from '@scure/base'; export { coreAddress } from './src/wallet/core.ts';`,
@@ -99,6 +102,76 @@ try {
 				get: () => forbidden('storage:' + key),
 			});
 		const sdk = await import('/dist/browser/index.js');
+		// Exercise the public operation API and WebCrypto with networking disabled.
+		const operationAccount = fixtures[0].proof.account;
+		const operationChain = {
+			namespace: operationAccount.namespace,
+			reference: operationAccount.reference,
+		};
+		let operationApprovals = 0;
+		const operationDispatcher = new sdk.OperationDispatcher({
+			accounts: { getAccounts: async () => [{ account: operationAccount }] },
+			approve: () => {
+				operationApprovals++;
+				return true;
+			},
+			adapters: [
+				{
+					capabilities: [
+						{
+							...operationChain,
+							methods: ['wallet.signTransaction', 'chain.getBalance'],
+						},
+					],
+					validateAccount: () => true,
+					validateOperation: () => {},
+					handlers: {
+						'wallet.signTransaction': () => ({ signed: 'browser-fixture' }),
+						'chain.getBalance': () => '100',
+					},
+				},
+			],
+		});
+		const operationRequest = sdk.createOperation({
+			operation: 'wallet.signTransaction',
+			chain: operationChain,
+			account: operationAccount,
+			params: { transaction: { value: '1', energy: '21000' } },
+		});
+		const operationCipher = new sdk.OperationCipher(
+			'https://example.com',
+			operationRequest.requestId,
+			crypto.getRandomValues(new Uint8Array(32)),
+		);
+		const openedOperation = await operationCipher.openRequest(
+			await operationCipher.sealRequest(operationRequest),
+		);
+		const operationResponse = await operationDispatcher.dispatch(
+			openedOperation,
+			'https://example.com',
+		);
+		const openedResponse = await operationCipher.openResponse(
+			await operationCipher.sealResponse(operationResponse),
+		);
+		check(
+			openedResponse.result.signed === 'browser-fixture' &&
+				operationApprovals === 1,
+			'wallet operation approval and encrypted response',
+		);
+		const balanceRequest = sdk.createOperation({
+			operation: 'chain.getBalance',
+			chain: operationChain,
+			params: {},
+		});
+		check(
+			(
+				await operationDispatcher.dispatch(
+					balanceRequest,
+					'https://example.com',
+				)
+			).result === '100' && operationApprovals === 1,
+			'read-only operation bypasses signer approval',
+		);
 		for (const name of [
 			'ConnectEngine',
 			'MemoryRequestStore',
@@ -294,6 +367,13 @@ try {
 	await page.locator('#chain option').nth(1).waitFor({ state: 'attached' });
 	await page.locator('#chain').selectOption('0');
 	await page.locator('#create').click();
+	await page.evaluate(async (cases) => {
+		const sdk = await import('/dist/browser/index.js');
+		for (const c of cases) {
+			if (sdk.validateWalletAccount(c.account).status !== c.status)
+				throw new Error('Address validation: ' + c.name);
+		}
+	}, walletFixtures);
 	const response = await page.evaluate(async () => {
 		const { decodeBrowserChallenge, signBrowserChallenge, encodeBrowserProof } =
 			await import('/dist/browser/index.js');

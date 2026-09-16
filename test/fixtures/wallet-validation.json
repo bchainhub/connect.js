@@ -1,0 +1,497 @@
+[
+	{
+		"name": "xcb-ed448",
+		"account": {
+			"namespace": "core",
+			"reference": "1",
+			"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "raw-ed25519",
+		"account": {
+			"namespace": "raw",
+			"reference": "ed25519",
+			"address": "8a88e3dd7409f195fd52db2d3cba5d72ca6709bf1d94121bf3748801b40f6f5c"
+		},
+		"status": "unsupported"
+	},
+	{
+		"name": "ethereum-siwe",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "bitcoin-bip322-p2wpkh",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "bc1q0xcqpzrky6eff2g52qdye53xkk9jxkvrh6yhyw"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Polygon",
+		"account": {
+			"namespace": "eip155",
+			"reference": "137",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Base",
+		"account": {
+			"namespace": "eip155",
+			"reference": "8453",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "BNB Smart Chain",
+		"account": {
+			"namespace": "eip155",
+			"reference": "56",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Solana",
+		"account": {
+			"namespace": "solana",
+			"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+			"address": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "TRON",
+		"account": {
+			"namespace": "tron",
+			"reference": "728126428",
+			"address": "TCNkawTmcQgYSU8nP8cHswT1QPjharxJr7"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Monero",
+		"account": {
+			"namespace": "monero",
+			"reference": "418015bb9ae982a1975da7d79277c270",
+			"address": "44yQXfkWZNmJ8QgRfFWTzmJ8QgRfFWTzmJ8QgRfFWTzmJ9HskYAEKgjVy4kd3K4MaxERLtGa7FFrVNLF3jYWyjHCFA3tNHB"
+		},
+		"status": "unsupported"
+	},
+	{
+		"name": "Stellar",
+		"account": {
+			"namespace": "stellar",
+			"reference": "pubnet",
+			"address": "GCFIRY65OQE7DFP5KLNS2PF2LVZMUZYJX4OZIEQ36N2IQANUB5XVYOJR"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Litecoin",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "LWKNsGErA9XxsrKVPimDAbuRXjCyyazZtc"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "XRP Ledger",
+		"account": {
+			"namespace": "xrpl",
+			"reference": "0",
+			"address": "rMPrYipfRHJryWfwYARAwhsVGvHwpUDjgA"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Zcash",
+		"account": {
+			"namespace": "bip122",
+			"reference": "00040fe8ec8471911baa1db1266ea15d",
+			"address": "t1Uy2cPMA3p5WDggEA1b32PwaaB2nfDssvp"
+		},
+		"status": "unsupported"
+	},
+	{
+		"name": "Cardano",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1vyxk54m7j3q6mrkevcunryrwf4p7e68c93cjk8gzxkhlkpsjpczl2"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Bitcoin (legacy P2PKH)",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "1C6Rc3w25VHud3dLDamutaqfKWqhrLRTaD"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "XRP Ledger (Ed25519)",
+		"account": {
+			"namespace": "xrpl",
+			"reference": "0",
+			"address": "r3sNTMefq5gsRumMYsNznnX6yzzxVH6dTC"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "EVM lowercase",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "0x1a642f0e3c3af545e7acbd38b07251b3990914f1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "EVM uppercase body",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "0x1A642F0E3C3AF545E7ACBD38B07251B3990914F1"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "EVM bad mixed checksum",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "0x1A642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "EVM ENS name",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "vitalik.eth"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "EVM malformed reference",
+		"account": {
+			"namespace": "eip155",
+			"reference": "01",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "trailing whitespace",
+		"account": {
+			"namespace": "eip155",
+			"reference": "1",
+			"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1\n"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "xcb-ed448 bad checksum",
+		"account": {
+			"namespace": "core",
+			"reference": "1",
+			"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876091"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "bitcoin-bip322-p2wpkh bad checksum",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "bc1q0xcqpzrky6eff2g52qdye53xkk9jxkvrh6yhy1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "TRON bad checksum",
+		"account": {
+			"namespace": "tron",
+			"reference": "728126428",
+			"address": "TCNkawTmcQgYSU8nP8cHswT1QPjharxJr1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Stellar bad checksum",
+		"account": {
+			"namespace": "stellar",
+			"reference": "pubnet",
+			"address": "GCFIRY65OQE7DFP5KLNS2PF2LVZMUZYJX4OZIEQ36N2IQANUB5XVYOJ1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Litecoin bad checksum",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "LWKNsGErA9XxsrKVPimDAbuRXjCyyazZt1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "XRP Ledger bad checksum",
+		"account": {
+			"namespace": "xrpl",
+			"reference": "0",
+			"address": "rMPrYipfRHJryWfwYARAwhsVGvHwpUDjg1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Cardano bad checksum",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1vyxk54m7j3q6mrkevcunryrwf4p7e68c93cjk8gzxkhlkpsjpczl1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Bitcoin (legacy P2PKH) bad checksum",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "1C6Rc3w25VHud3dLDamutaqfKWqhrLRTa1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "XRP Ledger (Ed25519) bad checksum",
+		"account": {
+			"namespace": "xrpl",
+			"reference": "0",
+			"address": "r3sNTMefq5gsRumMYsNznnX6yzzxVH6dT1"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Core Devin",
+		"account": {
+			"namespace": "core",
+			"reference": "3",
+			"address": "ab29b451c7cd5a1610c8aa18fd9013d0e7dcc4501a31"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Core Devin uppercase",
+		"account": {
+			"namespace": "core",
+			"reference": "3",
+			"address": "AB29B451C7CD5A1610C8AA18FD9013D0E7DCC4501A31"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Core wrong network",
+		"account": {
+			"namespace": "core",
+			"reference": "1",
+			"address": "ab29b451c7cd5a1610c8aa18fd9013d0e7dcc4501a31"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "bc Taproot",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "bc1pqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsvk87xn"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "bc Taproot uppercase",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "BC1PQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPSVK87XN"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "bc wrong witness checksum",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "bc1pqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpse2hjr3"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "bc testnet address on mainnet",
+		"account": {
+			"namespace": "bip122",
+			"reference": "000000000019d6689c085ae165831e93",
+			"address": "tb1qqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcr7mrzn4"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "ltc Taproot",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "ltc1pqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvps0jfwuk"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "ltc Taproot uppercase",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "LTC1PQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPSXQCRQVPS0JFWUK"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "ltc wrong witness checksum",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "ltc1pqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcrqvps6weze5"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "ltc testnet address on mainnet",
+		"account": {
+			"namespace": "bip122",
+			"reference": "12a765e31ffd4059bada1e25190f6e98",
+			"address": "tltc1qqvpsxqcrqvpsxqcrqvpsxqcrqvpsxqcr8npuru"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Solana short decoded key",
+		"account": {
+			"namespace": "solana",
+			"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+			"address": "1111111111111111111111111111111"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Solana zero key",
+		"account": {
+			"namespace": "solana",
+			"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+			"address": "11111111111111111111111111111111"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Solana valid r prefix",
+		"account": {
+			"namespace": "solana",
+			"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+			"address": "r1Uidf5M379kEsQREYFiZgJP9TGi437KHiWuX5M4J9M"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Solana valid T prefix",
+		"account": {
+			"namespace": "solana",
+			"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+			"address": "T1o7YUcLByKaGt1V4MvPxvp88qvEhxDqyb27WcBpwwM"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Cardano base",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1qyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqs9zjxd9"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Cardano mismatched network header base",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1qqqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqs55mplc"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Cardano enterprise",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1vyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgxca7aw"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Cardano mismatched network header enterprise",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "addr1vqqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgx2d0af"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "Cardano reward",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "stake1uyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqg6jacpu"
+		},
+		"status": "valid"
+	},
+	{
+		"name": "Cardano mismatched network header reward",
+		"account": {
+			"namespace": "cip34",
+			"reference": "1-764824073",
+			"address": "stake1uqqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqgpqyqszqg6qdfpm"
+		},
+		"status": "invalid"
+	},
+	{
+		"name": "unknown namespace",
+		"account": {
+			"namespace": "future",
+			"reference": "1",
+			"address": "nativeAddress"
+		},
+		"status": "unsupported"
+	},
+	{
+		"name": "unknown Bitcoin reference",
+		"account": {
+			"namespace": "bip122",
+			"reference": "unknown",
+			"address": "1C6Rc3w25VHud3dLDamutaqfKWqhrLRTaD"
+		},
+		"status": "unsupported"
+	}
+]

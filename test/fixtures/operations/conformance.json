@@ -1,0 +1,831 @@
+{
+	"requests": [
+		{
+			"name": "xcb-ed448",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"transaction": {
+						"to": "cb23f5e89ba978317da861b7ad06ba3103d41c876098",
+						"value": "1",
+						"energy": "21000"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "ethereum-siwe",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000002",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "eip155",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "eip155",
+					"reference": "1",
+					"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+				},
+				"params": {
+					"transaction": {
+						"to": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+						"value": "0x1",
+						"gas": "0x5208"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "bitcoin-bip322-p2wpkh",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000003",
+				"operation": "wallet.signPsbt",
+				"chain": {
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				"account": {
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"address": "bc1q0xcqpzrky6eff2g52qdye53xkk9jxkvrh6yhyw"
+				},
+				"params": {
+					"psbt": "cHNidP8=",
+					"encoding": "base64"
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Polygon",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000004",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "eip155",
+					"reference": "137"
+				},
+				"account": {
+					"namespace": "eip155",
+					"reference": "137",
+					"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+				},
+				"params": {
+					"transaction": {
+						"to": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+						"value": "0x1",
+						"gas": "0x5208"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Base",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000005",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "eip155",
+					"reference": "8453"
+				},
+				"account": {
+					"namespace": "eip155",
+					"reference": "8453",
+					"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+				},
+				"params": {
+					"transaction": {
+						"to": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+						"value": "0x1",
+						"gas": "0x5208"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "BNB Smart Chain",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000006",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "eip155",
+					"reference": "56"
+				},
+				"account": {
+					"namespace": "eip155",
+					"reference": "56",
+					"address": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1"
+				},
+				"params": {
+					"transaction": {
+						"to": "0x1a642f0E3c3aF545E7AcBD38b07251B3990914F1",
+						"value": "0x1",
+						"gas": "0x5208"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Solana",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000007",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+				},
+				"account": {
+					"namespace": "solana",
+					"reference": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+					"address": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9"
+				},
+				"params": {
+					"transaction": "AQID",
+					"encoding": "base64"
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "TRON",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000008",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "tron",
+					"reference": "728126428"
+				},
+				"account": {
+					"namespace": "tron",
+					"reference": "728126428",
+					"address": "TCNkawTmcQgYSU8nP8cHswT1QPjharxJr7"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "TRON"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Monero",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000009",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270"
+				},
+				"account": {
+					"namespace": "monero",
+					"reference": "418015bb9ae982a1975da7d79277c270",
+					"address": "44yQXfkWZNmJ8QgRfFWTzmJ8QgRfFWTzmJ8QgRfFWTzmJ9HskYAEKgjVy4kd3K4MaxERLtGa7FFrVNLF3jYWyjHCFA3tNHB"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "Monero"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Stellar",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000a",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "stellar",
+					"reference": "pubnet"
+				},
+				"account": {
+					"namespace": "stellar",
+					"reference": "pubnet",
+					"address": "GCFIRY65OQE7DFP5KLNS2PF2LVZMUZYJX4OZIEQ36N2IQANUB5XVYOJR"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "Stellar"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Litecoin",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000b",
+				"operation": "wallet.signMessage",
+				"chain": {
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98"
+				},
+				"account": {
+					"namespace": "bip122",
+					"reference": "12a765e31ffd4059bada1e25190f6e98",
+					"address": "LWKNsGErA9XxsrKVPimDAbuRXjCyyazZtc"
+				},
+				"params": {
+					"message": "Connect operations fixture"
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "XRP Ledger",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000c",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				"account": {
+					"namespace": "xrpl",
+					"reference": "0",
+					"address": "rMPrYipfRHJryWfwYARAwhsVGvHwpUDjgA"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "XRP Ledger"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Zcash",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000d",
+				"operation": "wallet.signMessage",
+				"chain": {
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d"
+				},
+				"account": {
+					"namespace": "bip122",
+					"reference": "00040fe8ec8471911baa1db1266ea15d",
+					"address": "t1Uy2cPMA3p5WDggEA1b32PwaaB2nfDssvp"
+				},
+				"params": {
+					"message": "Connect operations fixture"
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Cardano",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000e",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "cip34",
+					"reference": "1-764824073"
+				},
+				"account": {
+					"namespace": "cip34",
+					"reference": "1-764824073",
+					"address": "addr1vyxk54m7j3q6mrkevcunryrwf4p7e68c93cjk8gzxkhlkpsjpczl2"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "Cardano"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "Bitcoin (legacy P2PKH)",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000000f",
+				"operation": "wallet.signMessage",
+				"chain": {
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93"
+				},
+				"account": {
+					"namespace": "bip122",
+					"reference": "000000000019d6689c085ae165831e93",
+					"address": "1C6Rc3w25VHud3dLDamutaqfKWqhrLRTaD"
+				},
+				"params": {
+					"message": "Connect operations fixture"
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "XRP Ledger (Ed25519)",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000010",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "xrpl",
+					"reference": "0"
+				},
+				"account": {
+					"namespace": "xrpl",
+					"reference": "0",
+					"address": "r3sNTMefq5gsRumMYsNznnX6yzzxVH6dTC"
+				},
+				"params": {
+					"transaction": {
+						"chainSpecific": "XRP Ledger (Ed25519)"
+					}
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.getAccounts",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000011",
+				"operation": "wallet.getAccounts",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.signMessage",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000012",
+				"operation": "wallet.signMessage",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.signTransaction",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000013",
+				"operation": "wallet.signTransaction",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.sendTransaction",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000014",
+				"operation": "wallet.sendTransaction",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.switchChain",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000015",
+				"operation": "wallet.switchChain",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.addChain",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000016",
+				"operation": "wallet.addChain",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.signTypedData",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000017",
+				"operation": "wallet.signTypedData",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.signPsbt",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000018",
+				"operation": "wallet.signPsbt",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "wallet.signAllTransactions",
+			"request": {
+				"version": 1,
+				"requestId": "0000000000000000000000000000000000000000000000000000000000000019",
+				"operation": "wallet.signAllTransactions",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "chain.getBalance",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001a",
+				"operation": "chain.getBalance",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "chain.getTransaction",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001b",
+				"operation": "chain.getTransaction",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "chain.getBlock",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001c",
+				"operation": "chain.getBlock",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "chain.estimateFee",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001d",
+				"operation": "chain.estimateFee",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "chain.call",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001e",
+				"operation": "chain.call",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		},
+		{
+			"name": "myapp.customOperation",
+			"request": {
+				"version": 1,
+				"requestId": "000000000000000000000000000000000000000000000000000000000000001f",
+				"operation": "myapp.customOperation",
+				"chain": {
+					"namespace": "core",
+					"reference": "1"
+				},
+				"account": {
+					"namespace": "core",
+					"reference": "1",
+					"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+				},
+				"params": {
+					"sample": true
+				},
+				"metadata": {
+					"application": "Fixture dapp"
+				}
+			}
+		}
+	],
+	"responses": [
+		{
+			"version": 1,
+			"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+			"result": {
+				"signedTransaction": "fixture-only"
+			}
+		},
+		{
+			"version": 1,
+			"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+			"result": null
+		},
+		{
+			"version": 1,
+			"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+			"error": {
+				"code": "USER_REJECTED",
+				"message": "User rejected the operation."
+			}
+		}
+	],
+	"capabilities": [
+		{
+			"namespace": "core",
+			"reference": "1",
+			"methods": [
+				"wallet.getAccounts",
+				"wallet.signMessage",
+				"wallet.signTransaction",
+				"wallet.sendTransaction",
+				"wallet.switchChain",
+				"wallet.addChain",
+				"wallet.signTypedData",
+				"wallet.signPsbt",
+				"wallet.signAllTransactions",
+				"chain.getBalance",
+				"chain.getTransaction",
+				"chain.getBlock",
+				"chain.estimateFee",
+				"chain.call",
+				"myapp.customOperation"
+			]
+		}
+	],
+	"encrypted": {
+		"origin": "https://example.com",
+		"pairingKeyHex": "0101010101010101010101010101010101010101010101010101010101010101",
+		"request": {
+			"version": 1,
+			"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+			"operation": "wallet.signTransaction",
+			"chain": {
+				"namespace": "core",
+				"reference": "1"
+			},
+			"account": {
+				"namespace": "core",
+				"reference": "1",
+				"address": "cb23f5e89ba978317da861b7ad06ba3103d41c876098"
+			},
+			"params": {
+				"transaction": {
+					"to": "cb23f5e89ba978317da861b7ad06ba3103d41c876098",
+					"value": "1",
+					"energy": "21000"
+				}
+			},
+			"metadata": {
+				"application": "Fixture dapp"
+			}
+		},
+		"packet": {
+			"type": "connect:operation:encrypted:1",
+			"kind": "request",
+			"requestId": "0000000000000000000000000000000000000000000000000000000000000001",
+			"iv": "AgICAgICAgICAgIC",
+			"ciphertext": "fPS_LDgkqJK97ob5cIWw19PAtJyf-OlT56XQy0jLRE9HTy4HXV-T33ceYtmvF2xLmkXu55dq7Rb7c4OCUwR9ukTUodKW-i1YQWd_iNAsWBE7R2sRe5gEtbZMNud-L6FxLiQ4LVc4VaLCEigTYL224wF17X9dyI-JMTjj0EijBcNOQWZWvqJtuha7KDNlrsFnkdlEvO7mHhN-QW6knwJw_TrWuFbJsrDTy6YxepdsdXG5IO7lbcTEYin-Ud_2J3t7QxQLSxZV9Ecph0LvytfYhpHhsBfTJMOHK3CpG06EmDCuU8nIfOX7nRUfqi0_3cDYljRc1xdijS1SPWSqNBI_JqncFKBAFsu5-DVtx4tov63lPV7qIB-r4yrpk_o1_MXChxLMOiZClZGAWTyD4Od5bzBOrPSQYdX4LOUfX1iJuOcndXkkhS_yb_ktdIEGj8EwyubIS5PP7EopMG9dbcNpoQSWemaqJ-WnOaA5yk8GuAmGNyqfka4i4DW-AHku6kPAAZCKtxHbnSyp1Ify6U2fdY6ES7ISPu8AkwpL5EEQw5YS3TCQ1Ow8ZPay5kOgV6j5EmHgc9a4KqEwL7-9"
+		}
+	}
+}
