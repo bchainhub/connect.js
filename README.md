@@ -59,3 +59,15 @@ Other channels pass their packet directly to `handoff.accept(packet)`. No Better
 For separate device controls, use `connectBluetoothDevice(ticket)`, `isBluetoothDeviceConnected(device)` and `disconnectBluetoothDevice(device)`. Pass `{ device }` to `receiveBluetoothResponse(ticket, { device })` to reuse or reconnect that authorized device. Without it, receiving prompts for a device and connects automatically. See [device connection lifecycle](docs/NEARBY.md#connect-a-device-explicitly-or-on-transfer).
 
 This package is distributed under the [CORE License](LICENSE). It is not an OSI-approved license.
+
+# Wallet Operations
+
+Connect transports signing requests; the host wallet owns and uses the private key.
+
+The additive Wallet Operations API standardizes versioned requests, correlated responses, per-chain capabilities and explicit host approval. `OperationDispatcher` routes wallet methods to host signers and read-only chain methods to host RPC handlers. Transactions retain their native chain formats. Reuse existing `chains` and account providers through `OperationChainAdapter`; no transaction capability is inferred from an authentication profile.
+
+See the [canonical operation protocol and API guide](docs/OPERATIONS.md) and [EVM, Bitcoin PSBT, Solana, Core and balance examples](examples/operations.mjs). `OperationTransport` supports host message channels; `OperationCipher` adds optional AES-GCM request/response pairing. Existing authentication APIs and messages remain compatible.
+
+## Wallet address validation
+
+`validateWalletAccount` checks addresses against an explicit Connect namespace/reference and returns `valid`, `invalid`, or `unsupported`. `isValidWalletAccount` accepts only `valid`. These checks supplement wallet ownership verification. See [coverage, adapter integration and package compatibility](docs/WALLET_VALIDATION.md).
