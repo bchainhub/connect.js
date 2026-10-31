@@ -294,7 +294,7 @@ test('EIP-6963 discovery is brand-neutral, passive, deduplicated and disposable'
 				throw Error('discovery must not request accounts');
 			},
 		};
-	const announce = (uuid = '12345678-1234-1234-1234-123456789012') =>
+	const announce = (uuid = '12345678-1234-4234-8234-123456789012') =>
 		target.dispatchEvent(
 			new CustomEvent('eip6963:announceProvider', {
 				detail: {

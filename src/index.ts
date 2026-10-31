@@ -10,3 +10,7 @@ export * from './operations.js';
 export * from './operation-channel.js';
 export * from './wallet-validation.js';
 export * from './operation-validation.js';
+
+export * from './providers.js';
+
+export * from './wallet-provider.js';

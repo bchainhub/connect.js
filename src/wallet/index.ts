@@ -7,3 +7,7 @@ export * from './solana.js';
 export * from './cardano.js';
 export * from './discovery.js';
 export * from './bridges.js';
+
+export * from '../providers.js';
+
+export * from '../wallet-provider.js';

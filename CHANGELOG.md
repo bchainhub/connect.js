@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0
+
+- Add configurable provider identity, blockchain globals and universal multi-chain wallet routing, including Monero and Zcash.
+- Expand Ethereum and Core RPC, contract ABI, signing, transaction, token and NFT operations, with network checks and capability-based native SDK integration.
+- Add browser discovery, lifecycle safeguards, shared compatibility vectors and chain support documentation.
+- Refresh dependencies and validate package, browser and cross-language compatibility.
+
 ## 0.1.2
 
 - Publish npm when a GitHub Release is published in the app.

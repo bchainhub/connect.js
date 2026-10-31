@@ -13,7 +13,7 @@ npm run build
 
 Serve the repository as static files on your HTTPS domain and open `/examples/dapp/index.html`. No Connect server, database, session endpoint or blockchain RPC is required. For local development, use a trusted local HTTPS certificate and a DNS name such as `connect.test`; Connect's canonical origin rules do not accept `http://localhost`, IP addresses or custom ports. Use your existing static web development setup.
 
-Until the package is published, run `npm pack` in this repository and install the generated `.tgz` in your own dapp with `npm install /path/to/connect-protocol-0.1.2.tgz`.
+Until the package is published, run `npm pack` in this repository and install the generated `.tgz` in your own dapp with `npm install /path/to/connect-protocol-0.2.0.tgz`.
 
 The import map resolves `connect-protocol` to the built SDK. In a bundled dapp, install `connect-protocol`, remove the import map and keep the same JavaScript imports. For static deployment, retain the example files and the complete `dist/browser/` directory at the relative paths used by the import map, including adjacent chunks and license notices.
 
@@ -56,7 +56,7 @@ import { chains, coreAccountProvider } from 'connect-protocol';
 import { registerWallet } from './wallets.js';
 
 // coreBridge and requestWalletAccess are supplied by your wallet integration.
-// The bridge exposes getAccounts() and signConnect() as described in WALLETS.md.
+// The bridge exposes getAccounts() and signConnect() as described in wallets.md.
 export function installCoreWallet(coreBridge, requestWalletAccess) {
 	return registerWallet({
 		id: 'my-core-wallet',
@@ -70,7 +70,7 @@ export function installCoreWallet(coreBridge, requestWalletAccess) {
 }
 ```
 
-Core uses pure Ed448 and ICAN addresses. No fictional Core extension RPC API is assumed. The host supplies account access and signing; the SDK verifies the returned Core signature and address locally. The same registry accepts Cardano, TRON, Bitcoin, Stellar, Monero, XRP, Litecoin, Zcash and other existing [wallet adapters](../../docs/WALLETS.md). Add an `onChange` subscription when your host provides account/network/disconnection events; return its unsubscribe function.
+Core uses pure Ed448 and ICAN addresses. No fictional Core extension RPC API is assumed. The host supplies account access and signing; the SDK verifies the returned Core signature and address locally. The same registry accepts Cardano, TRON, Bitcoin, Stellar, Monero, XRP, Litecoin, Zcash and other existing [wallet adapters](../../docs/wallets.md). Add an `onChange` subscription when your host provides account/network/disconnection events; return its unsubscribe function.
 
 For cross-device use, the [manual request/response example](../browser-only.html) exports the full challenge and imports the proof. QR rendering/scanning and a return channel are supplied by the host.
 

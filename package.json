@@ -1,6 +1,6 @@
 {
 	"name": "connect-protocol",
-	"version": "0.1.3",
+	"version": "0.2.0",
 	"description": "Browser-only Connect authentication and multi-chain wallet adapters",
 	"type": "module",
 	"license": "SEE LICENSE IN LICENSE",
@@ -53,38 +53,40 @@
 	"devDependencies": {
 		"@noble/curves": "^2.4.0",
 		"@noble/hashes": "^2.4.0",
-		"@playwright/test": "^1.63.0",
+		"@playwright/test": "^1.64.1",
 		"@scure/base": "^2.4.0",
 		"@solana/wallet-standard-features": "^1.5.0",
-		"@stellar/stellar-sdk": "^17.1.0",
-		"@types/node": "^22.20.3",
+		"@stellar/stellar-sdk": "^17.4.0",
+		"@types/node": "^22.20.5",
 		"@wallet-standard/features": "^1.1.1",
 		"assert": "^2.1.0",
 		"bip322-js": "^4.0.0",
-		"cborg": "^6.1.2",
+		"cborg": "^6.2.1",
 		"esbuild": "^0.28.2",
 		"esbuild-plugins-node-modules-polyfill": "^1.8.3",
-		"eslint": "^10.10.0",
-		"monero-ts": "^0.11.15",
-		"prettier": "^3.9.6",
+		"eslint": "^10.14.0",
+		"monero-ts": "^0.11.21",
+		"prettier": "^3.9.10",
 		"qrcode": "^1.5.4",
 		"ripple-keypairs": "^3.1.0",
-		"tronweb": "^6.5.0",
+		"tronweb": "^6.5.1",
 		"typescript": "npm:@typescript/typescript6@^6.0.2",
-		"typescript-eslint": "^8.70.0",
-		"viem": "^2.56.5",
+		"typescript-eslint": "^8.72.1",
+		"viem": "^2.57.13",
 		"@typescript/native": "npm:typescript@^7.0.2"
 	},
 	"dependencies": {
 		"@wallet-standard/app": "^1.1.1",
 		"@wallet-standard/base": "^1.1.1",
 		"blockchain-wallet-validator": "1.2.1",
-		"zod": "^4.6.5"
+		"zod": "^4.6.7"
 	},
 	"overrides": {
-		"monero-ts": {
-			"serialize-javascript": "^7.1.1",
-			"uuid": "^11.1.1"
-		}
+		"minimatch": "^11.0.3",
+		"bip322-js": {
+			"bitcoinjs-lib": "7.0.1"
+		},
+		"axios": "^1.21.0",
+		"follow-redirects": "^1.16.2"
 	}
 }

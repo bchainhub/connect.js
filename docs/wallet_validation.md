@@ -2,7 +2,7 @@
 
 `validateWalletAccount({namespace, reference, address})` returns a safe `status`: `valid`, `invalid`, or `unsupported`. `isValidWalletAccount` returns true only for `valid`. Dart uses the existing `WalletIdentity` and `WalletValidationStatus` enum. The helpers never rewrite the account identity or expose upstream exception messages.
 
-The integrations pin `blockchain-wallet-validator` 1.2.1 and `flutter_wallet_validator` 0.1.4. Explicit namespace/reference mapping prevents automatic network detection or ENS/domain acceptance. Address validity does not prove ownership, account availability, selected network, or transaction safety. Existing signature verification and host approval remain required.
+The integrations use `blockchain-wallet-validator` pinned to 1.2.1 and `flutter_wallet_validator` with the compatible constraint `^0.1.4`. Explicit namespace/reference mapping prevents automatic network detection or ENS/domain acceptance. Address validity does not prove ownership, account availability, selected network, or transaction safety. Existing signature verification and host approval remain required.
 
 ## Operation adapters
 
