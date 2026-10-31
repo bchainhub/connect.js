@@ -11,4 +11,4 @@ Alternatively, copy the encrypted response from the wallet into the portal and c
 
 The Flutter example uses an ephemeral raw Ed25519 account; this portal explicitly allows that test profile alongside Core and Ethereum. Production dapps should request their intended chains. Every verification remains local: no server, database or RPC call. Load assets before disconnecting from the internet; provisioning an offline app cache is the host's responsibility.
 
-See [transport details and platform limits](../../docs/NEARBY.md). Keep all `dist/browser` chunks and license notices with the static deployment. Browser tests simulate BLE and use real signatures; physical BLE devices must still be tested.
+See [transport details and platform limits](../../docs/nearby.md). Keep all `dist/browser` chunks and license notices with the static deployment. Browser tests simulate BLE and use real signatures; physical BLE devices must still be tested.

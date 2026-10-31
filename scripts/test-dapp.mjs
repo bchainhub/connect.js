@@ -64,7 +64,7 @@ export async function testDapp(context, assetRoot) {
 							info: {
 								uuid: '11111111-1111-4111-8111-111111111111',
 								name: 'Example <wallet>',
-								icon: '',
+								icon: 'data:image/png;base64,AA==',
 								rdns: 'example.wallet',
 							},
 							provider,

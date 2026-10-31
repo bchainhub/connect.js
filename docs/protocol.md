@@ -26,11 +26,11 @@ Issued At: <issuedAt>
 Expiration Time: <expiresAt>
 ```
 
-Ethereum-compatible profiles use EIP-4361 (SIWE), with Connect account/profile/algorithm bindings in Resources. Chain-specific signing wrappers and address restrictions are defined in [CHAINS.md](CHAINS.md). Signers must not silently substitute a prefix, hash, account, chain, or algorithm.
+Ethereum-compatible profiles use EIP-4361 (SIWE), with Connect account/profile/algorithm bindings in Resources. Chain-specific signing wrappers and address restrictions are defined in [chains.md](chains.md). Signers must not silently substitute a prefix, hash, account, chain, or algorithm.
 
 ## Transport
 
-The browser API exchanges complete challenge/proof JSON envelopes through an application-selected channel. See [browser transport and QR examples](BROWSER.md). A cross-device scan needs a return channel: a response QR, copy/paste or existing peer messaging. The SDK contains no HTTP challenge fetcher, server endpoints, polling client or session redemption API.
+The browser API exchanges complete challenge/proof JSON envelopes through an application-selected channel. See [browser transport and QR examples](browser.md). A cross-device scan needs a return channel: a response QR, copy/paste or existing peer messaging. The SDK contains no HTTP challenge fetcher, server endpoints, polling client or session redemption API.
 
 The envelope types are `connect:challenge:1` and `connect:proof:1`, each with a `payload` containing the corresponding Connect v1 object. Parsers reject extra envelope fields and input over 16,384 characters. QR rendering, scanning and framing are host responsibilities.
 

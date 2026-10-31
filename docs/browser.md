@@ -27,7 +27,7 @@ const account = await request.verify(proof);
 // account is now a locally verified wallet identity.
 ```
 
-Choose a wallet/account using the [wallet adapters](WALLETS.md). The flow is identical for any supported adapter, including Ethereum-compatible wallets, Solana Wallet Standard, Cardano, TRON, and native wallet bridges. The SDK never asks for private keys. `signBrowserChallenge` signs but does not verify; the originating page calls `request.verify` to validate the result cryptographically.
+Choose a wallet/account using the [wallet adapters](wallets.md). The flow is identical for any supported adapter, including Ethereum-compatible wallets, Solana Wallet Standard, Cardano, TRON, and native wallet bridges. The SDK never asks for private keys. `signBrowserChallenge` signs but does not verify; the originating page calls `request.verify` to validate the result cryptographically.
 
 An extension can exchange the challenge and proof through its messaging API. It must obtain the relying-party origin from the browser's trusted sender/tab information, validate the sender and recipient, and pass that origin to `new BrowserConnect({ origin })` or `decodeBrowserChallenge`. Do not trust an origin simply because a message claims it. The signed protocol retains its canonical HTTPS domain requirement; extension URLs are not relying-party origins.
 
@@ -44,7 +44,7 @@ const challengePayload = request.exportChallenge();
 ```ts
 // Wallet: parse the scanned payload and show the challenge for approval.
 import {
-	decodeBrowserChallenge, signBrowserChallenge, encodeBrowserProof,
+  decodeBrowserChallenge, signBrowserChallenge, encodeBrowserProof,
 } from 'connect-protocol';
 
 const challenge = decodeBrowserChallenge(scannedPayload, expectedOrigin);
@@ -69,7 +69,7 @@ A self-contained QR does not authenticate the claimed website's ownership the wa
 
 Requests expire after two minutes by default (configurable from one second to five minutes). `request.status` reports `PENDING`, `CONSUMED`, `CANCELLED`, or `EXPIRED`. `request.cancel()` prevents later acceptance. Concurrent verification attempts cannot consume the same request twice. Invalid signatures do not consume it. Keep the original request object: reconstructing requests from untrusted challenges defeats local replay protection.
 
-All built-in profiles are available, with the same [chain/address restrictions](CHAINS.md) as server verification: Core Blockchain, Ethereum, Polygon, Base, Bitcoin, Solana, BNB Smart Chain, TRON, Monero, Stellar, Litecoin, XRP, Zcash and Cardano. This proves control of supported signing keys; it does not query balances, token holdings, transactions, smart-contract account state, or chain history. Custom profiles can be supplied through `ProfileRegistry` and `defineSigningProfile`.
+All built-in profiles are available, with the same [chain/address restrictions](chains.md) as server verification: Core Blockchain, Ethereum, Polygon, Base, Bitcoin, Solana, BNB Smart Chain, TRON, Monero, Stellar, Litecoin, XRP, Zcash and Cardano. This proves control of supported signing keys; it does not query balances, token holdings, transactions, smart-contract account state, or chain history. Custom profiles can be supplied through `ProfileRegistry` and `defineSigningProfile`.
 
 Local verification establishes identity for the current browser application. An application protecting server resources must independently authenticate requests on that server; a browser result does not create a trusted server session. The separate better-connect package owns Better Auth endpoints and session storage; connect-protocol has no server implementation.
 

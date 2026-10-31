@@ -11,7 +11,11 @@ Only publish a version that is not already on npm. Rerunning publication for an 
 
 CORE License text is copied unchanged from the reference flutter_txms repository. npm metadata uses `SEE LICENSE IN LICENSE` because CORE is a custom license.
 
-For better-connect, CI checks out the matching SDK source and runs `node scripts/prepare-sdk.mjs` before installing dependencies. The helper builds the ignored vendor tarball; `node scripts/sync-protocol.mjs` refreshes a local installation. Reference conformance fixtures live in `test/fixtures/` and remain versioned. Generated `vectors/` and `vendor/` directories are ignored. The published bundle includes the SDK so registry users do not need local filesystem dependencies.
+better-connect owns its authentication protocol and verification implementation and has
+no connect-protocol dependency or SDK source pin. All three packages build and release
+independently. Shared conformance fixtures and optional live Flutter integration verify
+wire compatibility. Its package checks install a standalone tarball and audit runtime
+dependencies; no sibling SDK checkout is required.
 
 References: [npm trusted publishing](https://docs.npmjs.com/trusted-publishers/), [Dart publishing workflow](https://github.com/dart-lang/setup-dart/blob/main/.github/workflows/publish.yml).
 

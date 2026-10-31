@@ -16,7 +16,7 @@ Import wallet adapters from `connect-protocol/wallet`. The former `connect-proto
 | `rippleAccountProvider` | XRP message-signing bridge | Classic addresses with secp256k1 or Ed25519 |
 | `walletAccountProvider` | WalletDriver with chain, getAccounts and sign | Additional native, browser, mobile, hardware and remote-wallet SDK integrations |
 
-“Coverage” means compatibility with the specified interface and proof scheme, not that every wallet product or version has been tested. Some wallets lack arbitrary message signing, expose a proprietary interface, or return an unsupported address/script type. Such wallets need a bridge or a new verified signing profile; the library does not fall back to transaction signing or guess signature formats. [The chain matrix](CHAINS.md) lists exact address limits. In particular, Phantom's old Bitcoin injected provider is deprecated; Phantom support here primarily uses its Solana and Ethereum-compatible interfaces.
+“Coverage” means compatibility with the specified interface and proof scheme, not that every wallet product or version has been tested. Some wallets lack arbitrary message signing, expose a proprietary interface, or return an unsupported address/script type. Such wallets need a bridge or a new verified signing profile; the library does not fall back to transaction signing or guess signature formats. [The chain matrix](chains.md) lists exact address limits. In particular, Phantom's old Bitcoin injected provider is deprecated; Phantom support here primarily uses its Solana and Ethereum-compatible interfaces.
 
 ## Choose a wallet, then authorize it
 

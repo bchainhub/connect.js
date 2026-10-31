@@ -1,6 +1,7 @@
 import { getWallets } from '@wallet-standard/app';
 import type { Wallet } from '@wallet-standard/base';
 import { ConnectError } from '../protocol.js';
+import { createProviderInfo, type ProviderInfo } from '../providers.js';
 import type { Eip1193Provider } from './ethereum.js';
 export { getWallets as getStandardWallets } from '@wallet-standard/app';
 export type { Wallet as StandardWallet } from '@wallet-standard/base';
@@ -15,19 +16,15 @@ export function getSolanaWallets(): readonly Wallet[] {
 		);
 }
 export interface EthereumWalletAnnouncement {
-	readonly info: {
-		readonly uuid: string;
-		readonly name: string;
-		readonly icon: string;
-		readonly rdns: string;
-	};
+	readonly info: ProviderInfo;
 	readonly provider: Eip1193Provider;
 }
 /** EIP-6963 metadata is untrusted display data, not authenticated wallet identity.
  * Discovery does not request accounts. Dispose when the wallet picker is closed. */
-export function discoverEthereumWallets(
+export function discoverProviders(
 	target: EventTarget = window,
 	onChange?: () => void,
+	prefix = 'eip6963',
 ) {
 	const wallets = new Map<string, EthereumWalletAnnouncement>();
 	let disposed = false;
@@ -50,10 +47,14 @@ export function discoverEthereumWallets(
 				[...wallets.values()].some((w) => w.provider === data.provider)
 			)
 				return;
+			const info = createProviderInfo(
+				data.info,
+				prefix === 'eip6963' ? 'ethereum' : 'core',
+			);
 			wallets.set(
 				uuid,
 				Object.freeze({
-					info: Object.freeze({ uuid, name, icon, rdns }),
+					info,
 					provider: data.provider,
 				}),
 			);
@@ -66,18 +67,31 @@ export function discoverEthereumWallets(
 			/* Ignore malformed announcements from other page scripts. */
 		}
 	};
-	target.addEventListener('eip6963:announceProvider', announce);
-	target.dispatchEvent(new Event('eip6963:requestProvider'));
+	target.addEventListener(`${prefix}:announceProvider`, announce);
+	target.dispatchEvent(new Event(`${prefix}:requestProvider`));
 	return Object.freeze({
 		get: () => Object.freeze([...wallets.values()]),
 		refresh() {
 			if (disposed) throw new ConnectError('invalidState');
-			target.dispatchEvent(new Event('eip6963:requestProvider'));
+			target.dispatchEvent(new Event(`${prefix}:requestProvider`));
 		},
 		dispose() {
 			disposed = true;
-			target.removeEventListener('eip6963:announceProvider', announce);
+			target.removeEventListener(`${prefix}:announceProvider`, announce);
 			wallets.clear();
 		},
 	});
+}
+
+export function discoverEthereumWallets(
+	target: EventTarget = window,
+	onChange?: () => void,
+) {
+	return discoverProviders(target, onChange, 'eip6963');
+}
+export function discoverCoreWallets(
+	target: EventTarget = window,
+	onChange?: () => void,
+) {
+	return discoverProviders(target, onChange, 'cip6963');
 }

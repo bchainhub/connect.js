@@ -1,3 +1,4 @@
+import { testUniversalWallet } from './test-universal-wallet.mjs';
 import { testNearby } from './test-nearby.mjs';
 import { testDapp } from './test-dapp.mjs';
 import { pathToFileURL } from 'node:url';
@@ -414,6 +415,7 @@ try {
 	if ((await page.locator('#result').textContent()) !== 'Request cancelled.')
 		throw new Error('Example cancellation failed');
 
+	await testUniversalWallet(context);
 	await testDapp(context, assetRoot);
 	await testNearby(context, assetRoot);
 	if (unexpected.length)
